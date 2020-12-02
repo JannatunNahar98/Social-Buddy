@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Home from './Component/Header/Home/Home';
+import Notfound from "./Component/Header/Notfound/Notfound";
 import PostDetails from "./Component/Header/PostDetails/PostDetails";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/:postId">
                <PostDetails></PostDetails>
           </Route>
+         
         </Switch>
       </Router>
     
