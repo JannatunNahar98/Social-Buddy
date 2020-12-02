@@ -1,13 +1,36 @@
 
-import './App.css';
-import Header from './Component/Header/Header';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import './App.css';
+import Home from './Component/Header/Home/Home';
+import PostDetails from "./Component/Header/PostDetails/PostDetails";
 
 function App() {
   return (
     <div>
-     <Header></Header>
+     
+      <Router>
+        <Switch>
+         <Route exact path="/home" >
+                 <Home></Home>
+         </Route>
+         <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/:postId">
+               <PostDetails></PostDetails>
+          </Route>
+        </Switch>
+      </Router>
+    
+   
     </div>
+    
   );
 }
 
